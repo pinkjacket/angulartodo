@@ -2,6 +2,9 @@
   "name": "angular2-todo",
   "version": "1.0.0",
   "scripts": {
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "prod": "webpack --config webpack.prod.js",
+    "test": "mocha-webpack --webpack-config webpack.test.js \"test/**/*test.js\"",
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
     "postinstall": "typings install",
@@ -47,7 +50,7 @@
     "webpack-node-externals": "^1.6.0"
   },
   "description": "angular tutorial",
-  "main": "index.js",
+  "main": ".app/main.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pinkjacket/angulartodo.git"

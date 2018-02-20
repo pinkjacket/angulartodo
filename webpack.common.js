@@ -6,7 +6,7 @@ const webpack = require("webpack");
 
 module.exports = {
 	entry: {
-		index: './src/index.js'
+		index: './app/main.ts'
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
@@ -15,7 +15,7 @@ module.exports = {
 		}),
     new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
-			template: 'src/templates/index.html',
+			template: './index.html',
 			title: 'Production'
 		})
   ],
